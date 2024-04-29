@@ -125,7 +125,7 @@ public class ImagePanel extends JPanel implements ActionListener {
         Image originalImage = originalIcon.getImage();
 
         // where the change is happening
-        BufferedImage bufferedImage = new BufferedImage(originalImage.getWidth(null), originalImage.getHeight(null), BufferedImage.TYPE_BYTE_GRAY);
+        BufferedImage bufferedImage = new BufferedImage(originalImage.getWidth(null), originalImage.getHeight(null), BufferedImage.TYPE_BYTE_BINARY);
 
         bufferedImage.getGraphics().drawImage(originalImage, 0, 0, null);
 
