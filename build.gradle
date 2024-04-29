@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// Define a custom task to execute the main class
+task run(type: JavaExec) {
+    main = 'org.example.Main' // Specify the fully qualified name of your main class
+    classpath = sourceSets.main.runtimeClasspath
+}
